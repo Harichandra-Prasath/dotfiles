@@ -35,26 +35,25 @@ setopt hist_find_no_dups
 # Path variables
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
-export PATH=$PATH:$HOME/scripts/private
-export PATH=$PATH:$HOME/scripts/public
+export PATH=$PATH:$HOME/scripts/
 export PATH=$PATH:$HOME/.fzf/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/opt/nvim-linux64/bin
+export PATH=$PATH:$HOME/.config/rofi/scripts
+
+# ENV Variables
+export LANG=en_US.UTF-8
+
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 
-# Custom Evals
-eval "$(SyncEnv hook --shell zsh)"
-
 # Aliases
 alias ls='ls --color'
 alias nano='nano -L'
 alias zsource='source ~/.zshrc'
-alias load='eval "$(SyncEnv load)"'
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
